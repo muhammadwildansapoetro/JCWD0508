@@ -1,11 +1,14 @@
 /*
 Create a function that can create a triangle pattern according to the height we provide like the
 following :
-01
-02 03
-04 05 06
-07 08 09 10
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
 ● Parameters : height → triangle height
+● Example input: 5
 */
 
 function trianglePattern (height: number) {
