@@ -17,25 +17,20 @@ for (let i = 0; i < str.length; i++) {
 
 console.log(res)
 
-/*
+// other way
 
-let inputStr: string = 'An apple a day keeps the doctor away';
+const Res: string = str.replace(/a/gi, "*") 
+// regEx = "/a/gi" = semua huruf "a" (g = global) dan non case sensitive (i)
+// .replace(/a/gi, "*") = replace semua huruf "a" atau "A" menjadi "*" 
 
-// Create an empty string to store the result
-let resultStr: string = "";
+console.log(Res)
 
-// Iterate through each character in the input string
-for (let i = 0; i < inputStr.length; i++) {
-    let char = inputStr[i];
+// Menghilangkan karakter selain alfabet + spasi
 
-    // Replace 'a' or 'A' with '*'
-    if (char === 'a' || char === 'A') {
-        resultStr += '*';
-    } else {
-        resultStr += char; // Otherwise, keep the character unchanged
-    }
-}
+const letter: string = "Hello@ Stu?dent Purwa4dhika"
 
-console.log(resultStr);  // Output: "*n *pple * d*y keeps the doctor *w*y"
+console.log(letter.replace(/[^a-zA-z\s]/g, ""))
 
-*/
+// Menghilangkan karakter selain alfabet + spasi + angka
+
+console.log(letter.replace(/[^a-zA-z0-9\s]/g, ""))

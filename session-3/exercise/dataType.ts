@@ -4,15 +4,7 @@ type.
 ○ Example : “hello” → 1
 */
 
-let inputData = true;
-let dataTypeNum;
+let input: any = true;
+let typeInput: string = typeof input
 
-if (typeof inputData === "string") {
-    dataTypeNum = 1
-} else if (typeof inputData === "number") {
-    dataTypeNum = 2
-} else {
-    dataTypeNum = 3
-}
-
-console.log(dataTypeNum)
+console.log(typeInput == "string" ? 1 : typeInput == "number" ? 2 : 3)

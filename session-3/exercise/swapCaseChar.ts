@@ -39,9 +39,11 @@ let swappedStr: string = ""
 
 for (let i = 0; i < str.length; i++) {
     if (str.charAt(i) === str.charAt(i).toUpperCase()) { // Jika karakter ke-i upper case
-        swappedStr += str.charAt(i).toLowerCase() // maka variable swappedStr diisi karakter ke-i lower case
-    } else { // jika tidak / selain itu
-        swappedStr += str.charAt(i).toUpperCase() // maka variable swappedStr diisi karakter ke-i upper case
+        swappedStr += str.charAt(i).toLowerCase() 
+        // maka value swappedStr i awal / i sebelumnya ditambah value swappedStr karakter ke-i dibuat lower case
+    } else { // jika karakter ke-i tidak upper case 
+        swappedStr += str.charAt(i).toUpperCase() 
+        // maka value swappedStr i awal / i sebelumnya ditambah value swappedStr karakter ke-i dibuat upper case
     }
 }
 
