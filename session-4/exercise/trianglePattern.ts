@@ -12,13 +12,30 @@ following :
 */
 
 function triangle (height: number) {
+    let result: string = ""
     for (let i = 1; i <= height; i++) {
         let res: string = ""
         for (let j = 1; j <= i; j++) {
             res += `${j} `
         }
-        console.log(res)
+        if (i !== height) res += `\n` 
+        result += res
+    }
+    return result
+}
+
+console.log(triangle(5))
+
+function trianglePattern (height: number) {
+    let num = 1
+    for (let i = 1; i <= height; i++) {
+        let row = ""
+        for (let j = 1; i <= i; j++) {
+            row += num.toString().padStart(2, "0") + " "
+            num++
+        }
+        console.log(row.trim())
     }
 }
 
-triangle(5)
+console.log(trianglePattern(3))
