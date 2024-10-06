@@ -20,6 +20,7 @@ if (firstChar == 1) {
 console.log(inputString.slice(0, firstChar))
 console.log(removeChar.length)
 console.log(inputString.slice(firstChar, removeChar.length))
+console.log(inputString.indexOf(removeChar))
 
 // simple way
 

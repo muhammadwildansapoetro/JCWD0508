@@ -166,7 +166,8 @@ console.log(palindrome)
 
 console.log(inputStr === palindrome ? "palindrome" : "not palindrome")
 
-// cara pertama looping value array menggunakan .forEach
+// cara pertama: looping value array menggunakan .forEach
+// kelebihan .forEach = bisa tau urutan index
 
 const newArr: number[] = [10, 20, 30, 40, 50]
 
@@ -174,20 +175,18 @@ newArr.forEach((item, index) => {
     console.log(item, index)
 })
 
-// kelebihan .forEach = bisa tau urutan index
-
+// cara kedua: looping value array menggunakan .map
+// kelebihan .map = bisa membuat array baru 
 
 newArr.map((item, index) => {
     console.log(item, index)
 })
 
-// kelebihan .map = bisa membuat array baru 
-
 const newArr2: number[] = newArr.map((item) => item += 5)
 
 console.log(newArr2)
 
-// membuat array baru dengan .forEach
+// cara membuat array baru dengan .forEach
 
 const newArr3: number[] = []
 

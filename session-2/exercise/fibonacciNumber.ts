@@ -28,27 +28,6 @@ Solutions
 3.  
 */
 
-const n: number = 2
-let n0: number = 0
-let n1: number = 1
-let result: number = 0
-
-if (n === 0) {
-    result = n0
-    console.log(result)
-} else if (n === 1) {
-    result = n1
-    console.log(result)
-} else {
-    for (let i = 2; i <= n; i++) {
-        result = n0 + n1
-        n0 = n1
-        n1 = result
-        console.log(result)
-    }
-}
-
-console.log(result)
 
 /*
 loop 1:

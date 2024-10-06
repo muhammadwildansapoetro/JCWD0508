@@ -7,10 +7,14 @@ Write a code to convert days to years, months and days (Notes: 1 year : 365 days
 function daysConvert (inputDays: number) {
     let year: number = (Math.floor(inputDays / 365))
     console.log(year)
-    let month: number = (Math.floor((inputDays - 365) / 30))
+    let month: number = (Math.floor((inputDays % 365) / 30))
     console.log(month)
     let days: number = (Math.floor(inputDays % 365 % 30))
     return `${inputDays} days is ${year} year, ${month} month, ${days} days`
 }
 
 console.log(daysConvert(400))
+console.log(daysConvert(365))
+console.log(daysConvert(30))
+console.log(daysConvert(1))
+console.log(daysConvert(1234))

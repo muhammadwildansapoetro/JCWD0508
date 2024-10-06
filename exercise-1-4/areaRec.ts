@@ -5,9 +5,10 @@ Write a code to find area of rectangle.
 */
 
 function areaRec (length: number, width: number) {
-    return length * width
+    let a: number = length * width // area rectangle
+    return `Rectangle with length: ${length} & width: ${width}, have area = ${a}`
 }
 
-const res: number = areaRec(5, 3)
-
-console.log(res)
+console.log(areaRec(5, 3))
+console.log(areaRec(4, 2))
+console.log(areaRec(7, 4))

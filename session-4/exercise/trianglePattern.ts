@@ -6,19 +6,26 @@ following :
 04 05 06
 07 08 09 10
 ● Parameters : height → triangle height
+
 */
 
 function trianglePattern (height: number) {
-    let result: string = "" // variabel penampung
-    for (let i = 1; i <= height; i++) { // loop dimulai dari 1; loop selama i <= height; increment i
-        let res: string = "" // variabel penampung
-        for (let j = 1; j <= i; j++) { // loop dimuali dari 1; loop selama j <= i; increment j
-            res += `${j} ` // res akhir = res awal + j
+    let output: string = ""
+    let count: number = 1
+
+    for (let i = 1; i <= height; i++) { 
+        let row: string = "" 
+
+        for (let j = 1; j <= i; j++) { 
+            row += count.toString().padStart(2, "0") + " "
+            count++
         }
-        if (i !== height) res += `\n` // jika i tidak sama dengan height, maka res akhir = res awal + enter
-        result += res // result akhir = result awal + res
+        if (i !== height) {
+            row += `\n`
+        }
+        output += row
     }
-    return result // mengembalikan ke variable result
+    return output
 }
 
-console.log(trianglePattern(5))
+console.log(trianglePattern(7))

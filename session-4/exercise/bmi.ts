@@ -1,0 +1,32 @@
+/*
+Create a function to calculate Body Mass Index (BMI)
+● Formula : BMI = weight (kg) / (height (meter))²
+● Parameters : weight & height
+● Return values :
+○ < 18.5 return “less weight”
+○ 18.5 - 24.9 return “ideal”
+○ 25.0 - 29.9 return “overweight”
+○ 30.0 - 39.9 return “very overweight”
+○ > 39.9 return “obesity”z
+*/
+
+function bmi (weight: number, height: number) {
+    let bmi: string = ""
+    let bmiNum: number = weight / ((height/100) ** 2)
+    console.log(bmiNum)
+
+    if (bmiNum < 18.5) {
+        bmi = "less weight"
+    } else if (bmiNum >= 18.5 && bmiNum < 24.9) {
+        bmi = "ideal"
+    } else if (bmiNum >= 25.0 && bmiNum < 29.9) {
+        bmi = "overweight"
+    } else if (bmiNum >= 30.0 && bmiNum < 39.9) {
+        bmi = "very overweight"
+    } else if (bmiNum > 39.9) {
+        bmi = "obesity"
+    }
+    return bmi
+}
+
+console.log(bmi(90, 180))

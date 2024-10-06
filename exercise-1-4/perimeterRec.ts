@@ -5,9 +5,8 @@ Write a code to find perimeter of rectangle.
 */
 
 function perimeterRec (length: number, width: number) {
-    return (2 * (length + width))
+    let p: number = 2 * (length + width)
+    return `Rectangle with length: 5 & width: 3, have perimeter = ${p}`
 }
 
-const res: number = perimeterRec(5, 3)
-
-console.log(res)
+console.log(perimeterRec(5, 3))
