@@ -4,11 +4,11 @@ numbers only
 ○ Example : [1,2,3,4,5,6,7,8,9,10] → [2,4,6,8,10]
 */
 
-function removeOdd (inputArr: number []) {
-    let evenArr: number[] = []
-
-    for (let i = 0; i = inputArr.length - 1; i++) {
-        inputArr.forEach()
-    }
+function removeOdd (arr: number[]) {
+    return arr.filter(input => input % 2 === 0)
 }
-removeOdd([1,2,3,4,5,6,7,8,9,10])
+
+const inputArr: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+const evenArr: number[] = removeOdd(inputArr)
+
+console.log(evenArr)

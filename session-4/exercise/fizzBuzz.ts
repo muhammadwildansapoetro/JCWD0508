@@ -28,4 +28,3 @@ function fizzBuzz (n: number) {
 } 
 
 console.log(fizzBuzz(10))
-
