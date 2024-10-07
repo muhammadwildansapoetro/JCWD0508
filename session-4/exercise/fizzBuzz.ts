@@ -12,13 +12,13 @@ function fizzBuzz (n: number) {
     let res: string = ""
 
     for (let i = 1; i <= n; i++) {
-        if (i % 3 == 0) {
-            arr.push("Fizz")
+        if (i % 3 == 0 && i % 5 == 0) {
+            arr.push("FizzBuzz")
             console.log(res)
+        } else if (i % 3 == 0) {
+            arr.push("Fizz")
         } else if (i % 5 == 0) {
             arr.push("Buzz")
-        } else if (i % 3 == 0 && i % 5 == 0) {
-            arr.push("FizzBuzz")
         } else {
             arr.push(i)
         }
@@ -27,4 +27,25 @@ function fizzBuzz (n: number) {
     return res
 } 
 
-console.log(fizzBuzz(10))
+console.log(fizzBuzz(15))
+
+// other way
+
+function fizzBuzz2 (n: number) {
+    let arr: (string | number)[] = []
+
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            arr.push("FizzBuzz") 
+        } else if (i % 3 == 0) {
+            arr.push("Fizz")
+        } else if (i % 5 == 0) {
+            arr.push("Buzz")
+        } else {
+            arr.push(i)
+        }
+    }
+    return arr.join(', ')
+} 
+
+console.log(fizzBuzz2(15))

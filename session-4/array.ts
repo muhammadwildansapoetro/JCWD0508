@@ -108,6 +108,7 @@ numArr.sort((a, b) => b - a) // sort descending , call back function
 console.log(numArr)
 
 numArr.sort() 
+
 // default ascending
 // jika sort tanpa callback funtion, hanya sort angka pertama, 
 // tidak cocok untuk sort number, bisa sort alfabet

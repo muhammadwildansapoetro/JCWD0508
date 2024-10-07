@@ -38,3 +38,4 @@ if (split === reverse) {
 } else {
     console.log(`${str} is not a palindrome`)
 }
+
