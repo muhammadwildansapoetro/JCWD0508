@@ -31,11 +31,22 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 function isPalindrome(s: string): boolean {
     
-    s.split("")
+    const sAlphaNum: string = s.toLowerCase().replace(/[^a-zA-Z0-9]/g, "")
+        console.log(sAlphaNum)
 
-    console.log(s.split("").filter((item) => item !== " "))
+    const sArr: string = sAlphaNum.split("").join("")
+        console.log(sArr)
 
-    return true
+    const sArrRev: string = sArr.split("").reverse().join("")
+        console.log(sArrRev)
+
+    if (sArr === sArrRev) {
+        return true
+    }
+
+    return false
 };
 
-isPalindrome("race a car")
+console.log(isPalindrome("race a car"))
+console.log(isPalindrome("A man, a plan, a canal: Panama"))
+console.log(isPalindrome(" "))

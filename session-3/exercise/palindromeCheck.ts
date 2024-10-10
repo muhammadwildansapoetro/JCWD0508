@@ -10,7 +10,7 @@ Hint:
     the date "22/02/2022" 
 */
 
-const str: string = "Racecar"
+const str: string = "Raceacar"
 let reverseStr: string = ""
 
 for (let i = str.length - 1; i >= 0; i--) {
@@ -26,8 +26,8 @@ console.log(str.length)
 // other way with no case sensitive
 
 let lower: string = str.toLowerCase()
-let split: string[] = lower.split("")
-let reverse: string[] = split.reverse()
+let split: string = lower.split("").join("")
+let reverse: string = split.split("").reverse().join("")
 
 console.log(lower)
 console.log(split)
