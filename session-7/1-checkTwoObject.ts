@@ -1,5 +1,5 @@
 /*
-Create a function to check if two objects are equal
+Create a function to check if two objects are equal (key and value)
 
 ● Example
 ○ Input : { a: 2 } & { a: 1 }
