@@ -13,6 +13,7 @@ Output: [1,2,4]
 Explanation: The array represents the integer 123.
 Incrementing by one gives 123 + 1 = 124.
 Thus, the result should be [1,2,4].
+
 Example 2:
 
 Input: digits = [4,3,2,1]
@@ -20,6 +21,7 @@ Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 Incrementing by one gives 4321 + 1 = 4322.
 Thus, the result should be [4,3,2,2].
+
 Example 3:
 
 Input: digits = [9]
@@ -31,18 +33,29 @@ Thus, the result should be [1,0].
 
 function plusOne(digits: number[]): number[] {
     
-    const numDigits: number = parseInt(digits.join("")) 
-        console.log(numDigits)
-    
-    const digPlus: number = numDigits + 1
-        console.log(digPlus)
+    // We iterate over the array from the last digit (least significant) to the first (most significant).
+    for (let i = digits.length - 1; i >= 0; i--) {
+        console.log(i)
+        console.log(digits[i])
 
-    const arrDigPlus: number[] = Array.from(String(digPlus), (num => Number(num)))
-        console.log(arrDigPlus)
-   
-    return arrDigPlus
+        // If the current digit is less than 9, simply increment it and return the result
+        if (digits[i] < 9) {
+            console.log(digits[i])
+            digits[i]++
+            return digits
+        }
+
+        // If the current digit is 9, set it to 0 and continue to the next digit
+        digits[i] = 0
+    }
+
+    // If all digits are 9, then we need to add a leading 1 (e.g., 999 + 1 = 1000)
+    digits.unshift(1)
+    
+    return digits
 };
 
-console.log(plusOne([1,2,3]))
-console.log(plusOne([4,3,2,1]))
+console.log(plusOne([1,2,3,4,5,6,7,8,8]))
+console.log(plusOne([1,2,3,4,5,6,7,8,9]))
 console.log(plusOne([9]))
+console.log(plusOne([9,9,9]))
