@@ -33,8 +33,9 @@ function isPalindrome(s: string): boolean {
     
     s.split("")
 
-    console.log(s.split(""))
+    console.log(s.split("").filter((item) => item !== " "))
 
+    return true
 };
 
 isPalindrome("race a car")
