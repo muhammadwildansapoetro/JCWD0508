@@ -7,7 +7,7 @@ replace multiples of 3 with "Fizz", multiples of 5 with "Buzz", multiples of 3 a
 ○ Example: n = 15 → 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 12, 13, 14, FizzBuzz
 */
 
-function fizzBuzz (n: number) {
+function fizzBuzz(n: number) {
     let arr: (string | number)[] = []
     let res: string = ""
 
@@ -22,21 +22,21 @@ function fizzBuzz (n: number) {
         } else {
             arr.push(i)
         }
-        res = arr.join(", ")
+        res = arr.join(",")
     }
     return res
-} 
+}
 
 console.log(fizzBuzz(15))
 
 // other way
 
-function fizzBuzz2 (n: number) {
+function fizzBuzz2(n: number) {
     let arr: (string | number)[] = []
 
     for (let i = 1; i <= n; i++) {
         if (i % 3 == 0 && i % 5 == 0) {
-            arr.push("FizzBuzz") 
+            arr.push("FizzBuzz")
         } else if (i % 3 == 0) {
             arr.push("Fizz")
         } else if (i % 5 == 0) {
@@ -46,6 +46,6 @@ function fizzBuzz2 (n: number) {
         }
     }
     return arr.join(', ')
-} 
+}
 
 console.log(fizzBuzz2(15))
