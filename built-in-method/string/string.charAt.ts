@@ -33,10 +33,10 @@ console.log(sentence.charAt(2));
 console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
 // Expected output: "The character at index 4 is q"
 
-// example
+// Example
 
 const anyString = "Brave new world";
-console.log(`The character at index 0   is '${anyString.charAt()}'`);
+// console.log(`The character at index 0   is '${anyString.charAt()}'`);
 // No index was provided, used 0 as default
 
 console.log(`The character at index 0   is '${anyString.charAt(0)}'`);

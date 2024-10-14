@@ -33,3 +33,7 @@ console.log(
     )}`,
 );
 // Expected output: "Character code 113 is equal to q"
+
+// Example
+
+console.log("ABC".charCodeAt(0)); // returns 65

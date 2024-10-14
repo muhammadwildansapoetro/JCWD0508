@@ -37,3 +37,22 @@ const maskedNumber = last4Digits.padStart(fullNumber.length, '*');
 
 console.log(maskedNumber);
 // Expected output: "************5581"
+
+// Basic examples 
+
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
+
+// Fixed width string number conversion
+
+// JavaScript version of: (unsigned)
+// printf "%0*d" width num
+function leftFillNum(num: number, targetLength: number) {
+    return num.toString().padStart(targetLength, "0");
+}
+
+const num = 123;
+console.log(leftFillNum(num, 5)); // "00123"

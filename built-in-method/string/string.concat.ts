@@ -19,8 +19,23 @@ Return value
 const str1 = 'Hello';
 const str2 = 'World';
 
-console.log(str1.concat(' ', str2));
+console.log(str1.concat(', ', str2));
 // Expected output: "Hello World"
 
 console.log(str2.concat(' ', str1));
 // Expected output: "World, Hello"
+
+// example
+
+const hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
+// Hello, Kevin. Have a nice day.
+
+const greetList = ["Hello", " ", "Venkat", "!"];
+console.log("".concat(...greetList)); // "Hello Venkat!"
+
+// console.log("".concat({})); // "[object Object]"
+// console.log("".concat([])); // ""
+// console.log("".concat(null)); // "null"
+// console.log("".concat(true)); // "true"
+// console.log("".concat(4, 5)); // "45"

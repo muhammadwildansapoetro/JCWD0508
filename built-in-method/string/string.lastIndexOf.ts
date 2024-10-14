@@ -36,3 +36,10 @@ console.log(
     `Index of the last ${searchTerm2} is ${paragraph2.lastIndexOf(searchTerm2)}`,
 );
 // Expected output: "Index of the last "dog" is 38"
+
+// example
+
+const anyString = "Brave, Brave New World";
+
+console.log(anyString.indexOf("Brave")); // 0
+console.log(anyString.lastIndexOf("Brave")); // 7

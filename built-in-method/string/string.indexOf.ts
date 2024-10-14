@@ -43,3 +43,31 @@ console.log(
     )}`,
 );
 // Expected output: "The index of the second "dog" is 38"
+
+// example 1 - Using indexOf()
+
+const str = "Brave new world";
+
+console.log(str.indexOf("w")); // 8
+console.log(str.indexOf("new")); // 6
+
+// example 2 - indexOf() and case-sensitivity
+
+const myString = "brie, pepper jack, cheddar";
+const myCapString = "Brie, Pepper Jack, Cheddar";
+
+console.log(myString.indexOf("cheddar")); // 19
+console.log(myCapString.indexOf("cheddar")); // -1
+
+// example 3 - Using indexOf() to count occurrences of a letter in a string
+
+const str2 = "To be, or not to be, that is the question.";
+let count = 0;
+let position = str2.indexOf("e");
+
+while (position !== -1) {
+    count++;
+    position = str2.indexOf("e", position + 1);
+}
+
+console.log(count); // 4

@@ -31,3 +31,14 @@ console.log(paragraph4.replaceAll('dog', 'monkey'));
 const regex2 = /Dog/gi;
 console.log(paragraph4.replaceAll(regex2, 'ferret'));
 // Expected output: "I think Ruth's ferret is cuter than your ferret!"
+
+// example - Using replaceAll()
+
+console.log("aabbcc".replaceAll("b", "."));
+// 'aa..cc'
+
+// example - Non-global regex throws
+
+console.log("aabbcc".replaceAll(/b/g, "."));
+("aa..cc");
+

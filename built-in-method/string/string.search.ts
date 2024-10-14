@@ -26,3 +26,15 @@ console.log(paragraph5.search(regex3));
 
 console.log(paragraph5[paragraph5.search(regex3)]);
 // Expected output: "!"
+
+// example
+
+const str = "hey JudE";
+const re = /[A-Z]/;
+const reDot = /[.]/;
+console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
+
+
+
+

@@ -37,7 +37,6 @@ console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
 // Expected output: "An index of -4 returns the character d"
 
 // example
-
 // A function which returns the last character of a given string
 function returnLast(str: string) {
     return str.at(-1);

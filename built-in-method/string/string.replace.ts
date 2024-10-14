@@ -41,3 +41,48 @@ console.log(paragraph3.replace("Ruth's", 'my'));
 const regex = /Dog/i;
 console.log(paragraph3.replace(regex, 'ferret'));
 // Expected output: "I think Ruth's ferret is cuter than your dog!"
+
+// example - Defining the regular expression in replace()
+
+const str = "Twas the night before Xmas...";
+const newstr = str.replace(/xmas/i, "Christmas");
+console.log(newstr); // Twas the night before Christmas...
+
+// example - Using the global and ignoreCase flags with replace()
+
+const re2 = /apples/gi;
+const str2 = "Apples are round, and apples are juicy.";
+const newstr2 = str2.replace(re2, "oranges");
+console.log(newstr2); // oranges are round, and oranges are juicy.
+
+// example - Switching words in a string
+
+const re3 = /(\w+)\s(\w+)/;
+const str3 = "Maria Cruz";
+const newstr3 = str3.replace(re3, "$2, $1");
+console.log(newstr3); // Cruz, Maria
+
+// example - Using an inline function that modifies the matched characters
+
+function styleHyphenFormat(propertyName: string) {
+    function upperToHyphenLower(match: any, offset: any, string: any) {
+        return (offset > 0 ? "-" : "") + match.toLowerCase();
+    }
+    return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
+}
+
+console.log(styleHyphenFormat('borderTop'))
+
+// example - Replacing a Fahrenheit degree with its Celsius equivalent
+
+function f2c(x: string) {
+    function convert(str: string, p1: number, offset: any, s: any) {
+        return `${((p1 - 32) * 5) / 9}C`;
+    }
+    const s = String(x);
+    const test = /(-?\d+(?:\.\d*)?)F\b/g;
+    return s.replace(test, convert);
+}
+
+console.log(f2c("212F"));
+console.log(f2c("0F"));
