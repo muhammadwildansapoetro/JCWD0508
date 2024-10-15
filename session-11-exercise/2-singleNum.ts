@@ -34,7 +34,7 @@ function singleNum(nums: number[]) {
         }
     }
 
-    return `All number in [${nums}] appears twice`
+    return `No single number in [${nums}]`
 }
 
 const input1: number[] = [2, 2, 1]
@@ -47,7 +47,7 @@ console.log(singleNum(input2));
 console.log(singleNum(input3));
 console.log(singleNum(input4));
 
-// simplified
+// Pake XOR tapi tidak bisa cari single number yang jumlahnya lebih dari 1
 
 function noTwiceNum(nums: number[]) {
     let result: number = 0
@@ -58,20 +58,20 @@ function noTwiceNum(nums: number[]) {
         // contoh: result = 4 ^ 1 = 5 karena dalam binary: 0100 ^ 0001 = 0101, sehingga hasilnya 0101 = 5
     }
 
-    if (result == 0) return `All number in [${nums}] appears twice`
+    if (result == 0) return `No single number in [${nums}]`
 
     return result
 }
 
-const Input1: number[] = [2, 2, 1]
-// const Input2: number[] = [4, 1, 2, 1, 2]
-// const Input3: number[] = [1]
-// const Input4: number[] = [1, 1, 2, 2, 3, 3]
+const Input1: number[] = [1, 1, 2, 2, 3, 4]
+const Input2: number[] = [4, 1, 2, 1, 2]
+const Input3: number[] = [1]
+const Input4: number[] = [1, 1, 2, 2, 3, 3]
 
-console.log(noTwiceNum(input1));
-// console.log(noTwiceNum(input2));
-// console.log(noTwiceNum(input3));
-// console.log(noTwiceNum(input4));
+console.log(noTwiceNum(Input1));
+console.log(noTwiceNum(input2));
+console.log(noTwiceNum(input3));
+console.log(noTwiceNum(input4));
 
 /*
 Example 2: nums = [4, 1, 2, 1, 2]
@@ -96,3 +96,22 @@ Fifth iteration:
 result = 6 ^ 2 = 4
 (In binary: 0110 ^ 0010 = 0100, which is 4.)
 */
+
+// double filter
+
+function single(arr: number[]) {
+    return arr
+        .filter((item, _index, arr) => arr
+            .filter(value => value == item).length == 1)
+}
+
+console.log(single([4, 1, 2, 1, 2]));
+
+// example
+
+const arr = [4, 1, 2, 1, 2, 3, 2]
+
+arr.forEach((element, index, array) => {
+    console.log(`${element} ada di index ke-${index} di array [${array}]`);
+})
+

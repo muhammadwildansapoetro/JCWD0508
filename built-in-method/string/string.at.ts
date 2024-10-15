@@ -16,13 +16,13 @@ index
     i.e. if a negative number is used, 
     the character returned will be found by counting back from the end of the string.
 
-Return value
+Return value:
     A String consisting of the single UTF-16 code unit located at the specified position. 
     Returns undefined if the given index can not be found. */
 
 const sentence = 'The quick brown fox jumps over the lazy dog.';
 
-let index = 0;
+let index = 5;
 
 console.log(sentence.at(0));
 

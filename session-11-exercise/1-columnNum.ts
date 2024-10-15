@@ -59,3 +59,14 @@ console.log(columnNum(Input1));
 console.log(columnNum(Input2));
 console.log(columnNum(Input3));
 console.log(columnNum(Input4));
+
+// other way
+
+function columnDigit(column: string) {
+
+    return column
+        .split("")
+        .reduce((a, b) => a * 26 + (parseInt(b, 36) - 9), 0)
+}
+
+console.log(columnDigit("AA"));
