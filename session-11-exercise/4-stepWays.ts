@@ -51,4 +51,18 @@ a + b = c
                 3 + 5 = 8 (5)
 */
 
+// Other way
 
+function fibonaci(n: number) {
+    const res: number[] = [0, 1]
+
+    for (let i = 0; i <= n; i++) {
+        res.push(res[i] + res[i + 1])
+    }
+
+    return res[n + 1]
+}
+
+console.log(fibonaci(3))
+console.log(fibonaci(4))
+console.log(fibonaci(5));
