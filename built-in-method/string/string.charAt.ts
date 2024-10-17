@@ -8,19 +8,6 @@ so it may return lone surrogates.
 
 To get the full Unicode code point at the given index, 
 use String.prototype.codePointAt() and String.fromCodePoint(). 
-
-Syntax:
-    charAt(index)
-
-Parameters
-index
-    Zero-based index of the character to be returned. 
-    Converted to an integer — undefined is converted to 0.
-
-Return value
-    A string representing the character (exactly one UTF-16 code unit) at the specified index. 
-    If index is out of the range of 0 – str.length - 1, 
-    charAt() returns an empty string.
 */
 
 const sentence = 'The quick brown fox jumps over the lazy dog.';

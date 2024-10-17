@@ -2,19 +2,7 @@
 
 The concat() method of String values concatenates the string arguments 
 to this string and returns a new string. 
-
-Syntax:
-    concat()
-    concat(str1)
-    concat(str1, str2)
-    concat(str1, str2, / …, / strN)
-
-Parameters:
-str1, …, strN
-    One or more strings to concatenate to str.
-
-Return value
-    A new string containing the combined text of the strings provided. */
+*/
 
 const str1 = 'Hello';
 const str2 = 'World';
