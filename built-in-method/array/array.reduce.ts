@@ -35,4 +35,21 @@ function reducer(accumulator: number, currentValue: number, index: number) {
 
 array.reduce(reducer);
 
+// How reduce() works with an initial value
+
+[15, 16, 17, 18, 19].reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    10,
+);
+
+
+// Sum of values in an object array
+
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+const sum = objects.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.x,
+    0,
+);
+
+console.log(sum); // 6
 
