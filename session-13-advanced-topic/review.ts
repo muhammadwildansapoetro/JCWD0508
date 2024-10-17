@@ -64,3 +64,17 @@ console.log(arr);
 // method harus pake ()
 // property tidak harus pake ()
 
+// 
+
+const A: any = 2
+const B: any = '1'
+const C: any = true
+
+// console.log(A + B - B);
+// console.log(A + (B - B));
+// console.log(A + B + B);
+// console.log(A % B);
+
+console.log(A + B + B);
+console.log(A + B * C);
+console.log((A + B) * C);

@@ -44,18 +44,19 @@ const myFunc = async () => {
     console.log('Task 3')
 }
 
-myFunc()
+// myFunc()
 
-/*
-To make a promise, just use “new” and “Promise” keyword.
+//--
 
-Promise accept two parameters, the first parameter is when the promise is successful, 
-the second parameter is when the promise.
+const fetchData = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/use')
+        if (!response.ok) throw 'failed to fetch'
+        const users = await response.json()
+        console.log(users);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-If the code executed, expected output will be
-“Success” and “finally done”. 
-
-Why “success”? Because our Promise code will return successfully and run resolve. 
-
-When promise success, it will execute then() method, after that finally() method execute.
-*/
+fetchData()
